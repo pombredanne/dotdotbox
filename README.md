@@ -1,7 +1,7 @@
 dotdotbox
 =========
 
-Use dotdotbox (..box) to configure and keep updated your opinionated Linux desktop inspired by dotfiles and based on ansible playbooks.
+Use dotdotbox (..box) to configure and update your opinionated Linux desktop inspired by dotfiles and based on ansible playbooks.
 
 The components of this playbook can change over time but as of today, it has the following configured:
 
