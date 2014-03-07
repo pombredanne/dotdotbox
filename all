@@ -1,0 +1,113 @@
+---
+
+project_name: memgrid
+project_root: /var/projects/memgrid
+# server_name: memgrid.com
+project_repo: git@lindevgit:memgrid
+
+ntp_server: default-time.example.com
+
+dispatcher_bucket_location_ssl_enabled: False
+node_bucket_nginx_ssl_enabled: False
+node_bucket_vertx_ssl_enabled: False
+
+redis_version: 2.8.5
+
+
+python_packages:
+  - pip
+  - virtualenv
+  - supervisor
+  - uwsgi
+  - redis
+
+system_packages:
+  - build-essential
+  - make
+  - tcl8.5
+  - dbus-x11 # Required for dbus-x11
+  - git-core
+  - libevent-dev
+  - nginx
+  - uwsgi
+  - postgresql
+  - postgresql-server-dev-all
+  - python-dev
+  - python-setuptools
+  - python-imaging
+  - python-psycopg2
+#  - redis-server
+#  - postfix
+  - postgresql-client
+  - postgresql
+  - postgresql-contrib
+  - libssl0.9.8
+  - libpq-dev
+  - libxml2-dev
+  - libjpeg62
+  - libjpeg62-dev
+  - zlib1g-dev
+  - vim
+  - htop
+    # mosh is not yet available on saucy
+    #   - mosh
+  - python-virtualenv
+  - python-pip
+  - python-software-properties
+  - python-passlib
+  - python-pycurl
+  - zsh
+  - mc
+  - autojump
+  - lxc-docker
+  - uuid
+  - ruby
+  - ruby-json
+  - autossh
+    #   - linux-image-generic-lts-raring
+    #   - linux-headers-generic-lts-raring
+
+system_purge:
+    - chef
+    - puppet
+    - whoopsie
+    - postfix
+    # autoremove
+    - augeas-lenses
+    - erubis
+    - facter
+    - libaugeas-ruby
+    - libaugeas0
+    - ohai
+    - puppet-common
+    - ruby-augeas
+    - ruby-bunny
+    - ruby-erubis
+    - ruby-highline
+    - ruby-i18n
+    - ruby-ipaddress
+    - ruby-json
+    - ruby-mime-types
+    - ruby-mixlib-authentication
+    - ruby-mixlib-cli
+    - ruby-mixlib-config
+    - ruby-mixlib-log
+    - ruby-mixlib-shellout
+    - ruby-moneta
+    - ruby-net-ssh
+    - ruby-net-ssh-gateway
+    - ruby-net-ssh-multi
+    - ruby-polyglot
+    - ruby-rest-client
+    - ruby-safe-yaml
+    - ruby-shadow
+    - ruby-sigar
+    - ruby-systemu
+    - ruby-treetop
+    - ruby-uuidtools
+    - ruby-yajl
+    - redis-server # It will be installed from source!
+
+initfiles:
+    #   - gunicorn
+

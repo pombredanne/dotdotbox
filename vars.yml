@@ -1,0 +1,70 @@
+---
+
+project_name: dotansible
+
+ntp_server: default-time.example.com
+
+dispatcher_bucket_location_ssl_enabled: False
+
+python_packages:
+  - pip
+  - virtualenv
+
+system_packages:
+  - build-essential
+  - make
+  - tcl8.5
+  - dbus-x11 # Required for dbus-x11
+  - git-core
+  - libevent-dev
+  - nginx
+  - uwsgi
+  - python-dev
+  - python-setuptools
+  - python-imaging
+  - python-psycopg2
+#  - redis-server
+#  - postfix
+  - postgresql-client
+  - libssl0.9.8
+  - libpq-dev
+  - libxml2-dev
+  - libjpeg62
+  - libjpeg62-dev
+  - zlib1g-dev
+  - vim
+  - htop
+    # mosh is not yet available on saucy
+    #   - mosh
+  - python-virtualenv
+  - python-pip
+  - python-software-properties
+  - python-passlib
+  - python-pycurl
+  - zsh
+  - mc
+  - autojump
+  - lxc-docker
+  - uuid
+  - ruby
+  - ruby-json
+  - autossh
+    #   - linux-image-generic-lts-raring
+    #   - linux-headers-generic-lts-raring
+
+system_purge:
+    - chef
+    - puppet
+    - whoopsie
+    - postfix
+    # autoremove
+    - augeas-lenses
+    - erubis
+    - facter
+    - libaugeas-ruby
+    - libaugeas0
+    - redis-server # It will be installed from source!
+
+initfiles:
+    #   - gunicorn
+
