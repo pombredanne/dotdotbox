@@ -28,6 +28,10 @@ Create script to have automated apple wireless keyboard detection
 http://www.organicdesign.co.nz/Apple_wireless_keyboard_on_Linux
 
 
+the name
+--------
+dotdotbox or simply "..box" is about taking the concept of sharing .dotfiles and building a repeatable and shareable mechanism to maintain and configure Linux desktop environment.
+
 
 Authors
 --------
