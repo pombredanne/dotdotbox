@@ -15,7 +15,7 @@ The components of this playbook can change over time but as of today, it has the
 Building from scratch
 ---------------------
 ```
-Create a virtualbox to check out if dotdotbox suits your needs
+# Create a virtualbox to check out if dotdotbox suits your needs
 ./create.sh
 
 # Run in your system to setup or upgrade if already set up.
