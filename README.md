@@ -25,9 +25,9 @@ Building from scratch
 TODO
 ----
 
-- [ ] Create script to have automated apple wireless keyboard detection
+- Create script to have automated apple wireless keyboard detection
 http://www.organicdesign.co.nz/Apple_wireless_keyboard_on_Linux
-- [ ] Configure and install all the most needed fonts used for coding
+- Configure and install all the most needed fonts used for coding
 
 the name
 --------
