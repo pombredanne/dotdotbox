@@ -28,6 +28,7 @@ TODO
 - Create script to have automated apple wireless keyboard detection
 http://www.organicdesign.co.nz/Apple_wireless_keyboard_on_Linux
 - Configure and install all the most needed fonts used for coding
+- http://blog.hawkhost.com/2010/07/02/tmux-%E2%80%93-the-terminal-multiplexer-part-2/#bind-last-window
 
 the name
 --------
