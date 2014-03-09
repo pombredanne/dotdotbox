@@ -18,6 +18,10 @@ TODO
 Create script to have automated apple wireless keyboard detection
 http://www.organicdesign.co.nz/Apple_wireless_keyboard_on_Linux
 
+https://wiki.archlinux.org/index.php/tmux
+
+https://coderwall.com/p/rwmdvq
+
 Updating
 --------
 TODO

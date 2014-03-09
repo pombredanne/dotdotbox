@@ -11,11 +11,11 @@ Vagrant.configure("2") do |config|
   config.vbguest.no_remote = false
   config.vbguest.auto_update = true
 
-  config.vm.define :dotdotboxlocal do |c|
+  config.vm.define :dotdotbox do |c|
 
     # c.vm.network :hostonly, "192.168.179.254"
 
-    c.vm.network :private_network, ip: "192.168.179.254"
+    c.vm.network :private_network, ip: "192.168.179.250"
 # , virtualbox__intnet: true
 
 #    c.vm.network :forwarded_port, host: 5432, guest: 5432
@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
     c.vm.box = "saucy64"
     c.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box"
 
-    c.vm.hostname = "dotdotboxlocal"
+    c.vm.hostname = "dotdotbox"
 
     c.vm.provision :shell, :inline => <<STRING
     sudo echo "dir::cache::archives /opt/cache/apt;" | sudo tee /etc/apt/apt.conf.d/80myhostcache > /dev/null
@@ -54,7 +54,7 @@ STRING
 
 
     c.vm.provider :virtualbox do |vb|
-       vb.customize ['modifyvm', :id, '--name', 'dotdotboxlocal', '--cpus', '2', '--memory', 1024]
+       vb.customize ['modifyvm', :id, '--name', 'dotdotbox', '--cpus', '1', '--memory', 512]
     end
 
   end

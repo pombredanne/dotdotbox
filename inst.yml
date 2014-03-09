@@ -1,12 +1,37 @@
 ---
- - hosts: servers
+ - hosts: local
  
    vars_files:
      - vars.yml
    gather_facts: false
    sudo: true
+
+   tasks:
+   - name: disable ipv6 step 1
+     sysctl: name="net.ipv6.conf.all.disable_ipv6" state=present reload="yes" checks="both" value="1"
  
- #  tasks:
- #  - name: "hei"
- #    shell: "ls"
+   - name: disable ipv6 step 2
+     sysctl: name="net.ipv6.conf.default.disable_ipv6" state=present reload="yes" checks="both" value="1"
+ 
+   - name: disable ipv6 step 3
+     sysctl: name="net.ipv6.conf.lo.disable_ipv6" state=present reload="yes" checks="both" value="1"
+
+   - name: Update system package repos and upgrade
+     apt: update_cache=yes upgrade=safe
+     tags: upgrade
+ 
+   - name: Install package management
+     apt: update_cache=no pkg="python-software-properties,aptitude" state=installed force=yes
+     ignore_errors: yes
+     tags: upgrade
+
+   - name: Install required system packages.
+     apt: pkg=${item} state=installed install_recommends=no force=yes
+     with_items: ${system_packages}
+     tags: upgrade
+ 
+   - name: Remove unneccessary packages.
+     apt: pkg=${item} state=absent purge=yes force=yes
+     with_items: ${system_purge}
+     tags: upgrade
 

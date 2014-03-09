@@ -44,7 +44,7 @@ system_packages:
   - zsh
   - mc
   - autojump
-  - lxc-docker
+    #   - lxc-docker
   - uuid
   - ruby
   - ruby-json
