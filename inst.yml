@@ -7,6 +7,7 @@
    sudo: true
 
    tasks:
+
    - name: disable ipv6 step 1
      sysctl: name="net.ipv6.conf.all.disable_ipv6" state=present reload="yes" checks="both" value="1"
  

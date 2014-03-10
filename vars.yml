@@ -17,8 +17,8 @@ system_packages:
   - dbus-x11 # Required for dbus-x11
   - git-core
   - libevent-dev
-  - nginx
-  - uwsgi
+    #   - nginx
+    #   - uwsgi
   - python-dev
   - python-setuptools
   - python-imaging
