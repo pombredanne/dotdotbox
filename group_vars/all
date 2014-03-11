@@ -21,6 +21,8 @@ system_packages:
     #   - uwsgi
   - python-dev
   - python-setuptools
+  - iptables
+  - ufw
   - python-imaging
   - python-psycopg2
 #  - redis-server

@@ -1,0 +1,5 @@
+---
+- name: Set up iptables rules
+  copy: src=iptables-save dest=/etc/iptables.rules
+  notify: restart iptables
+

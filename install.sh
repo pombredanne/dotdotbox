@@ -1,3 +1,3 @@
 #!/bin/bash
-ansible-playbook -v -i ansible_hosts -l local inst.yml $1
+ansible-playbook -v -i ansible_hosts -l local ddbox.yml $1
 
