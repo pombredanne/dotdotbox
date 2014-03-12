@@ -11,15 +11,6 @@
 
    tasks:
 
-   - name: disable ipv6 step 1
-     sysctl: name="net.ipv6.conf.all.disable_ipv6" state=present reload="yes" checks="both" value="1"
- 
-   - name: disable ipv6 step 2
-     sysctl: name="net.ipv6.conf.default.disable_ipv6" state=present reload="yes" checks="both" value="1"
- 
-   - name: disable ipv6 step 3
-     sysctl: name="net.ipv6.conf.lo.disable_ipv6" state=present reload="yes" checks="both" value="1"
-
    - name: Update system package repos and upgrade
      apt: update_cache=yes upgrade=safe
      tags: upgrade
