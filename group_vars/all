@@ -10,6 +10,21 @@ python_packages:
   - pip
   - virtualenv
 
+system_ppa:
+# sudo add-apt-repository ppa:gwendal-lebihan-dev/cinnamon-stable
+# sudo add-apt-repository ppa:krytarik/tuxgarage
+  - ppa:gnome-terminator
+  - ppa:alexmurray/indicator-sensors
+  - ppa:atareao/atareao
+  - ppa:yubico/stable
+  - ppa:thebernmeister/ppa
+  - ppa:kilian/f.lux
+  # - ppa:geod/ppa-geod
+  - ppa:mozillateam/thunderbird-next
+  - ppa:kubuntu-ppa/backports
+  - ppa:no1wantdthisname/ppa
+  - ppa:no1wantdthisname/openjdk-fontfix
+
 system_packages:
   - build-essential
   - make
@@ -53,6 +68,69 @@ system_packages:
   - autossh
     #   - linux-image-generic-lts-raring
     #   - linux-headers-generic-lts-raring
+  - indicator-sensors
+  - my-weather-indicator
+  - gtk2-engines-pixbuf
+  - indicator-virtual-box
+  - fluxgui
+  - indicator-workspaces
+  - unity-2d-settings
+  - compizconfig-settings-manager
+  - ppa-purge
+  - gconf-editor
+  - compiz-fusion-plugins-extra
+  - git
+  - python-pip
+  - pavucontrol
+  - paprefs
+  - devilspie
+  - gdevilspie
+  - xdotool
+  - conky
+  - tint2
+  - xfonts-terminus
+  - enigmail
+  - thunderbird
+  - fontconfig-infinality
+  - gnome-tweak-tool
+  - unclutter
+  - darc
+  - dnsutils
+  - mesa-utils
+  - libxinerama-dev
+  - libxxf86vm-dev
+  - libxinerama-dev
+  - libxss-dev
+  - python-yubico
+  - xchat
+  - rxvt-unicode
+  - pidgin
+  - transmission
+  - terminator
+  - autojump
+  - mc
+  - vim
+  - python3
+  - kupfer
+  - zsh
+  - dropbox
+  - dkms
+  - virtualbox
+  - bluetooth
+  - bluez-compat
+  - bluez-utils
+  - blueman
+  - sane
+  - libsane-extras
+  - xsane
+  - libssl-dev
+  - zlib1g-dev
+  - libvorbis-dev
+  - libtool
+  - libpulse-dev
+  - libgstreamer-plugins-base0.10-0
+  - libgstreamer0.10-dev
+  - libao-dev
 
 system_purge:
     - chef

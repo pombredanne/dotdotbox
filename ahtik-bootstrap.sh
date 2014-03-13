@@ -5,37 +5,8 @@
 # packages
 
 # Starting openvpn
-# REPOS
-sudo add-apt-repository ppa:gwendal-lebihan-dev/cinnamon-stable
-sudo add-apt-repository ppa:krytarik/tuxgarage
-sudo add-apt-repository ppa:gnome-terminator
-sudo apt-add-repository ppa:alexmurray/indicator-sensors
-sudo add-apt-repository ppa:atareao/atareao
-sudo add-apt-repository ppa:yubico/stable
-ppa:thebernmeister/ppa
-ppa:kilian/f.lux
-ppa:geod/ppa-geod
-ppa:mozillateam/thunderbird-next
-ppa:kubuntu-ppa/backports
-add-apt-repository ppa:no1wantdthisname/ppa
-add-apt-repository ppa:no1wantdthisname/openjdk-fontfix
 wget --no-check-certificate https://download.01.org/gfx/RPM-GPG-KEY-ilg ; \
 sudo rpm --import RPM-GPG-KEY-ilg
-
-# PACKAGES
-indicator-sensors my-weather-indicator gtk2-engines-pixbuf indicator-virtual-box fluxgui indicator-workspaces unity-2d-settings compizconfig-settings-manager ppa-purge gconf-editor compiz-fusion-plugins-extra git python-pip pavucontrol paprefs devilspie gdevilspie xdotool conky tint2 xfonts-terminus enigmail thunderbird fontconfig-infinality gnome-tweak-tool unclutter darc dnsutils mesa-utils libxinerama-dev
-sudo apt-get install libxxf86vm-dev libxinerama-dev libxss-dev python-yubico
-
-xchat rxvt-unicode pidgin transmission terminator autojump mc vim python3  kupfer zsh dropbox dkms virtualbox
-
-sudo apt-get install bluetooth bluez-compat bluez-utils blueman
-
-sudo apt-get install sane libsane-extras xsane
-
-aptitude install libssl-dev zlib1g-dev libvorbis-dev libtool
-    aptitude install libpulse-dev # For pulseaudio backend
-      aptitude install libgstreamer-plugins-base0.10-0 libgstreamer0.10-dev # For GStreamer backend
-        aptitude install libao-dev # For libao backends
 
 # Intel graphics
 wget --no-check-certificate https://download.01.org/gfx/RPM-GPG-KEY-ilg-2 -O - | \
