@@ -14,7 +14,7 @@ system_ppa:
 # sudo add-apt-repository ppa:gwendal-lebihan-dev/cinnamon-stable
 # sudo add-apt-repository ppa:krytarik/tuxgarage
   - ppa:gnome-terminator
-  - ppa:alexmurray/indicator-sensors
+#  - ppa:alexmurray/indicator-sensors
   - ppa:atareao/atareao
   - ppa:yubico/stable
   - ppa:thebernmeister/ppa
@@ -68,17 +68,17 @@ system_packages:
   - autossh
     #   - linux-image-generic-lts-raring
     #   - linux-headers-generic-lts-raring
-  - indicator-sensors
-  - my-weather-indicator
+#  - indicator-sensors
+#  - my-weather-indicator
   - gtk2-engines-pixbuf
   - indicator-virtual-box
   - fluxgui
-  - indicator-workspaces
-  - unity-2d-settings
+ # - indicator-workspaces
+#  - unity-2d-settings
   - compizconfig-settings-manager
   - ppa-purge
   - gconf-editor
-  - compiz-fusion-plugins-extra
+#  - compiz-fusion-plugins-extra
   - git
   - python-pip
   - pavucontrol
@@ -94,7 +94,7 @@ system_packages:
   - fontconfig-infinality
   - gnome-tweak-tool
   - unclutter
-  - darc
+#  - darc
   - dnsutils
   - mesa-utils
   - libxinerama-dev
@@ -113,9 +113,9 @@ system_packages:
   - python3
   - kupfer
   - zsh
-  - dropbox
+#  - dropbox
   - dkms
-  - virtualbox
+#  - virtualbox
   - bluetooth
   - bluez-compat
   - bluez-utils
