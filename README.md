@@ -38,6 +38,7 @@ http://www.organicdesign.co.nz/Apple_wireless_keyboard_on_Linux
 - Configure and install all the most needed fonts used for coding
 - http://blog.hawkhost.com/2010/07/02/tmux-%E2%80%93-the-terminal-multiplexer-part-2/#bind-last-window
 - http://alexyu.se/content/2012/04/tmux-and-irssi-sitting-tree
+- Check out https://github.com/thoughtbot/dotfiles for ideas
 
 the name
 --------
