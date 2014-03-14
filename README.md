@@ -3,14 +3,22 @@ dotdotbox
 
 Use dotdotbox (..box) to configure and update your opinionated Linux desktop inspired by dotfiles and based on ansible playbooks.
 
-The components of this playbook can change over time but as of today, it has the following configured:
+The components of this playbook can change over time but as of today, it has the following configured (at this stage ..box is INCOMPLETE & IN PROGRESS, not everything works, this page will be updated as the first functional release is out!):
 
  * xmonad
  * zprezto (incl zsh)
  * vim
  * tmux
  * xfce4
-
+ * additional fonts for programmers
+ * font rendering tweaks
+ * java
+ * apple wireless keyboard
+ * easy sound output switch
+ * support for mechanical audio volume knobs (external sound cards that support it)
+ * dropbox
+ * estonian ID card support
+ * yubico 2FA token
 
 Building from scratch
 ---------------------
