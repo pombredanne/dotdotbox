@@ -136,7 +136,7 @@ system_packages:
   - argyll
   - icc-utils
   - virtualbox-4.3
-  - virtualbox-guest-additions-iso
+#   - virtualbox-guest-additions-iso
 
 system_purge:
     - chef
