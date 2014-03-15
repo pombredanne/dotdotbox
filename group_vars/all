@@ -24,6 +24,7 @@ system_ppa:
   - ppa:kubuntu-ppa/backports
   - ppa:no1wantdthisname/ppa
   - ppa:no1wantdthisname/openjdk-fontfix
+  - ppa:keithw/mosh
 
 system_packages:
   - build-essential
@@ -115,7 +116,6 @@ system_packages:
   - zsh
 #  - dropbox
   - dkms
-#  - virtualbox
   - bluetooth
   - bluez-compat
   - bluez-utils
@@ -131,6 +131,12 @@ system_packages:
   - libgstreamer-plugins-base0.10-0
   - libgstreamer0.10-dev
   - libao-dev
+  - mosh
+  # icc color profiles
+  - argyll
+  - icc-utils
+  - virtualbox-4.3
+  - virtualbox-guest-additions-iso
 
 system_purge:
     - chef

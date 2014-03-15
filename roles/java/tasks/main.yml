@@ -1,5 +1,5 @@
 ---
-
+# TODO: Improve the playbook to work faster/avoid unneccessary update and install, especially when running as part of the full playbook. Possibly move the package repo out of this role.
   - name: ensure required packages are installed for Java 7
     apt: name=$item state=latest update_cache=yes
     with_items:

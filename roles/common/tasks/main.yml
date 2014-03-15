@@ -5,6 +5,18 @@
   # apt_repository: repo='universe'
   apt_repository: repo='deb http://archive.ubuntu.com/ubuntu saucy universe'
 
+- name: Add virtualbox repo key
+  shell: wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+
+- name: Add Virtualbox repo
+  apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian saucy contrib'
+
+- name: add docker repo key
+  apt_key: id=A88D21E9 url=https://get.docker.io/gpg
+
+- name: Add Docker repo
+  apt_repository: repo='deb http://get.docker.io/ubuntu docker main'
+
 - name: disable ipv6 step 1
   sysctl: name="net.ipv6.conf.all.disable_ipv6" state=present reload="yes" checks="both" value="1"
 

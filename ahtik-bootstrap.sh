@@ -42,7 +42,6 @@ chmod +x install-google-fonts
 #!/bin/bash
 FONT_NAME="SourceCodePro"
 URL="http://sourceforge.net/projects/sourcecodepro.adobe/files/latest/download"
-
 mkdir /tmp/adodefont
 cd /tmp/adodefont
 wget ${URL} -O ${FONT_NAME}.zip
@@ -118,19 +117,26 @@ sudo add-apt-repository ppa:webupd8team/rhythmbox
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates
 sudo ppa-purge ppa:ubuntu-x-swat/x-updates
 
-sudo apt-get install xfce4-utils xfce4-cpugraph-plugin xfce4-datetime-plugin xfce4-dict xfce4-indicator-plugin xfce4-netload-plugin xfce4-power-manager xfce4-quicklauncher-plugin xfce4-screenshooter xfce4-systemload-plugin moreutils gitg git-cola gitk giggle git-gui openvpn tofrodos ruby apcalc xloadimage virtualbox-guest-additions-iso virtualbox dkms rar acroread ttf-ancient-fonts lsb-core estonianidcard ruby-full ruby-dev
+sudo apt-get install xfce4-utils xfce4-cpugraph-plugin xfce4-datetime-plugin
+xfce4-dict xfce4-indicator-plugin xfce4-netload-plugin xfce4-power-manager
+xfce4-quicklauncher-plugin xfce4-screenshooter xfce4-systemload-plugin moreutils
+gitg git-cola gitk giggle git-gui openvpn
+tofrodos ruby apcalc xloadimage
+virtualbox-guest-additions-iso virtualbox dkms rar
+acroread ttf-ancient-fonts
+lsb-core estonianidcard ruby-full ruby-dev
 
 #install latest from https://01.org/linuxgraphics/downloads
 
-sudo apt-get install python-software-properties
-sudo add-apt-repository ppa:keithw/mosh
-sudo apt-get update
-sudo apt-get install mosh
+# sudo apt-get install python-software-properties
+# sudo add-apt-repository ppa:keithw/mosh
+# sudo apt-get update
+# sudo apt-get install mosh
 
 apt-get install ghc6
 
 # icc color profiles:
-sudo apt-get install argyll icc-utils
+# sudo apt-get install argyll icc-utils
 
 # Not working properly...
 http://www.craiglotter.co.za/2012/04/20/how-to-install-s3fs-on-an-ubuntu-server/
