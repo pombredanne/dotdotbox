@@ -6,7 +6,7 @@ Use dotdotbox (..box) to configure and update your opinionated Linux desktop ins
 The components of this playbook can change over time but as of today, it has the following configured (at this stage ..box is INCOMPLETE & IN PROGRESS, not everything works, this page will be updated as the first functional release is out!):
 
  * xmonad
- * zprezto (incl zsh)
+ * https://github.com/robbyrussell/oh-my-zsh (not zprezto as initially planned and what I'm using right now)
  * vim
  * tmux
  * xfce4
