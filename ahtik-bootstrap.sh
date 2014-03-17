@@ -5,12 +5,6 @@
 # packages
 
 # Starting openvpn
-wget --no-check-certificate https://download.01.org/gfx/RPM-GPG-KEY-ilg ; \
-sudo rpm --import RPM-GPG-KEY-ilg
-
-# Intel graphics
-wget --no-check-certificate https://download.01.org/gfx/RPM-GPG-KEY-ilg-2 -O - | \
-sudo apt-key add -
 
 #OPENVPN conf
 sudo openvpn --config /home/ahtik/vpn/xxx.ovpn&

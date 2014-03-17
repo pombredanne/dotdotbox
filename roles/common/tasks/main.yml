@@ -11,6 +11,14 @@
 - name: Add Virtualbox repo
   apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian saucy contrib'
 
+- name: Add Intel gpu drivers repo
+  shell: wget -q https://download.01.org/gfx/RPM-GPG-KEY-ilg -O- | sudo apt-key add -
+  tags: intelgpu
+    
+- name: Add intel gpu drivers repo 2
+  shell: wget -q https://download.01.org/gfx/RPM-GPG-KEY-ilg-2 -O- | sudo apt-key add -
+  tags: intelgpu
+
 - name: add docker repo key
   apt_key: id=A88D21E9 url=https://get.docker.io/gpg
 
