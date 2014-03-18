@@ -150,6 +150,13 @@ system_purge:
     - libaugeas-ruby
     - libaugeas0
     - redis-server # It will be installed from source!
+    - unity-lens-video
+    - unity-lens-shopping 
+    - unity-lens-photos 
+    - unity-lens-gwibber 
+    - unity-lens-files 
+    - unity-lens-applications
+    - unity-lens-music
 
 initfiles:
     #   - gunicorn

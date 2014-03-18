@@ -22,8 +22,6 @@ chsh -s /bin/zsh
 sudo add-apt-repository ppa:mc3man/fixing-scale
 https://launchpad.net/ubuntu-tweak/0.8.x/0.8.5/+download/ubuntu-tweak_0.8.5-1_all.deb
 
-sudo apt-get purge unity-lens-video unity-lens-shopping unity-lens-photos unity-lens-gwibber unity-lens-files unity-lens-applications unity-lens-music
-
 download skype from http://www.skype.com/en/download-skype/skype-for-linux/downloading/?type=ubuntu64
 install lastpass from https://lastpass.com/misc_download.php
 
