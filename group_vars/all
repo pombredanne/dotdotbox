@@ -136,7 +136,7 @@ system_packages:
   - argyll
   - icc-utils
   - virtualbox-4.3
-  - virtualbox-guest-dkms
+#  - virtualbox-guest-dkms
 #   - virtualbox-guest-additions-is
   - gitg
   - git-cola
@@ -149,9 +149,10 @@ system_packages:
   - ruby-dev
   - apcalc
   - xloadimage
-  - rar
+#  - rar
   - lsb-core
-  - ghc6 # haskell for xmona
+#  - ghc6 # haskell for xmona
+  - libghc-x11-dev
   - postgresql-client
   - libpq-dev
   - arandr
