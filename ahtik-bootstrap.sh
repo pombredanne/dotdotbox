@@ -26,6 +26,22 @@ sudo openvpn --config /home/ahtik/vpn/xxx.ovpn&
 # Run to update haskell libs
 cabal install cabal-install
 tint2 xcompmgr docky obconf synapse thunar thunar-archive-plugin thunar-media-tags-plugin nitrogen parcellite
+Edit /usr/share/gnome-session/sessions/xmonad.session
+[GNOME Session]
+ Name=Xmonad/GNOME
+ RequiredComponents=gnome-settings-daemon;gnome-panel;
+ RequiredProviders=windowmanager;panel;
+ DefaultProvider-windowmanager=xmonad
+ DefaultProvider-panel=unity-2d-panel
+ DesktopName=Unity
+
+# System security conf for local desktop needs
+$ sudo nano -w /etc/security/limits.conf
+YOURUSERNAME - rtprio 99
+YOURUSERNAME - nice -10
+
+sudo visudo
+myusername ALL=(ALL) NOPASSWD: ALL
 
 
 # ZSH
@@ -160,10 +176,6 @@ xfwm4-themes
 
 https://makandracards.com/makandra/12447-how-to-move-a-window-to-the-next-monitor-on-xfce-xubuntu
 
-$ sudo nano -w /etc/security/limits.conf
-
-YOURUSERNAME - rtprio 99
-YOURUSERNAME - nice -10
 
 https://github.com/jtmohr/xchat-colors-solarized
 
@@ -172,18 +184,6 @@ sudo add-apt-repository ppa:gwendal-lebihan-dev/hexchat-stable
 sudo apt-get install hexchat
 
 
-sudo visudo
-ahtik ALL=(ALL) NOPASSWD: ALL
-
-
-Edit /usr/share/gnome-session/sessions/xmonad.session
-[GNOME Session]
- Name=Xmonad/GNOME
- RequiredComponents=gnome-settings-daemon;gnome-panel;
- RequiredProviders=windowmanager;panel;
- DefaultProvider-windowmanager=xmonad
- DefaultProvider-panel=unity-2d-panel
- DesktopName=Unity
 
 Install
 https://launchpad.net/egtk
@@ -192,11 +192,9 @@ sudo apt-add-repository -y ppa:teejee2008/themes
 sudo apt-get update
 sudo apt-get install elementary-gtk-theme
 
-
-sudo apt-get install gnome-shell-extensions gnome-tweak-tool
+# sudo apt-get install gnome-shell-extensions gnome-tweak-tool
 # Then enable "User Themes Extension" from gnome-tweak-tool/Advanced Settings
-
-sudo apt-get install gnome-themes-standard gnome-themes-extras gnome-themes-ubuntu gnome-themes-standard-data gnome-theme-gilouche
+# sudo apt-get install gnome-themes-standard gnome-themes-extras gnome-themes-ubuntu gnome-themes-standard-data gnome-theme-gilouche
 
 # dmg file creation mkfs.hfs
 sudo apt-get install hfsprogs
