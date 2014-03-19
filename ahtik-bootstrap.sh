@@ -53,8 +53,6 @@ sudo dpkg -r libdigidoc2
 sudo dpkg -r libdigidoc-common
 rm -rf /var/cache/apt/archives/libdigidoc2_3.7.0.909-ubuntu-12-04_i386.deb rm -rf /var/cache/apt/archives/libdigidocpp0_3.7.0.969-ubuntu-12-04_i386.deb
 
-sudo apt-get install virtualbox-guest-dkms
-
 # Latest java
 sudo add-apt-repository ppa:webupd8team/java
 
@@ -112,11 +110,8 @@ sudo ppa-purge ppa:ubuntu-x-swat/x-updates
 sudo apt-get install xfce4-utils xfce4-cpugraph-plugin xfce4-datetime-plugin
 xfce4-dict xfce4-indicator-plugin xfce4-netload-plugin xfce4-power-manager
 xfce4-quicklauncher-plugin xfce4-screenshooter xfce4-systemload-plugin moreutils
-gitg git-cola gitk giggle git-gui openvpn
-tofrodos ruby apcalc xloadimage
-virtualbox-guest-additions-iso virtualbox dkms rar
-acroread ttf-ancient-fonts
-lsb-core estonianidcard ruby-full ruby-dev
+
+estonianidcard
 
 #install latest from https://01.org/linuxgraphics/downloads
 
@@ -125,10 +120,6 @@ lsb-core estonianidcard ruby-full ruby-dev
 # sudo apt-get update
 # sudo apt-get install mosh
 
-apt-get install ghc6
-
-# icc color profiles:
-# sudo apt-get install argyll icc-utils
 
 # Not working properly...
 http://www.craiglotter.co.za/2012/04/20/how-to-install-s3fs-on-an-ubuntu-server/
@@ -139,14 +130,10 @@ http://xentek.net/articles/448/installing-fuse-s3fs-and-sshfs-on-ubuntu/
 http://www.dragondisk.com/faq.html
 
 
-sudo apt-get install postgresql-client  libpq-dev
-
-
 sudo apt-get install libssl0.9.8
 
 
 xfce4-taskmanager xfce4-terminal xfce4-volumed xfce4-weather-plugin xfce4-xkb-plugin
-sudo apt-get install arandr
 
 sudo apt-get install shimmer-themes gnome-icon-theme-full
 

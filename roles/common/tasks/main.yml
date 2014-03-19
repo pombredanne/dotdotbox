@@ -25,6 +25,9 @@
 - name: Add Docker repo
   apt_repository: repo='deb http://get.docker.io/ubuntu docker main'
 
+- name: Increase fs watch handle limit
+  sysctl: name="fs.inotify.max_user_watches" state=present reload="yes" checks="both" value="1048576"
+
 - name: disable ipv6 step 1
   sysctl: name="net.ipv6.conf.all.disable_ipv6" state=present reload="yes" checks="both" value="1"
 

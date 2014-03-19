@@ -136,7 +136,25 @@ system_packages:
   - argyll
   - icc-utils
   - virtualbox-4.3
-#   - virtualbox-guest-additions-iso
+  - virtualbox-guest-dkms
+#   - virtualbox-guest-additions-is
+  - gitg
+  - git-cola
+  - gitk
+  - giggle
+  - git-gui
+  - openvpn
+  - tofrodos
+  - ruby-full
+  - ruby-dev
+  - apcalc
+  - xloadimage
+  - rar
+  - lsb-core
+  - ghc6 # haskell for xmona
+  - postgresql-client
+  - libpq-dev
+  - arandr
 
 system_purge:
     - chef
