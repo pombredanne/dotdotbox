@@ -4,29 +4,58 @@
 
 # packages
 
-# Starting openvpn
-
-#OPENVPN conf
-sudo openvpn --config /home/ahtik/vpn/xxx.ovpn&
-
-# For xmonad & haskell
-sudo apt-get install libghc-x11-dev
-# Run
-# cabal install cabal-install
-# to update haskell libs
-
-# ZSH
-chsh -s /bin/zsh
-
+# UNITY
 # fix expose
 sudo add-apt-repository ppa:mc3man/fixing-scale
 https://launchpad.net/ubuntu-tweak/0.8.x/0.8.5/+download/ubuntu-tweak_0.8.5-1_all.deb
 
+gsettings set org.gnome.desktop.interface menubar-accel ""
+
+gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
+gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
+gconftool --type boolean --set /apps/nautilus/preferences/show_desktop false
+
+
+# Starting openvpn
+
+#OPENVPN
+sudo openvpn --config /home/ahtik/vpn/xxx.ovpn&
+
+
+# XMONAD
+# Run to update haskell libs
+cabal install cabal-install
+tint2 xcompmgr docky obconf synapse thunar thunar-archive-plugin thunar-media-tags-plugin nitrogen parcellite
+Edit /usr/share/gnome-session/sessions/xmonad.session
+[GNOME Session]
+ Name=Xmonad/GNOME
+ RequiredComponents=gnome-settings-daemon;gnome-panel;
+ RequiredProviders=windowmanager;panel;
+ DefaultProvider-windowmanager=xmonad
+ DefaultProvider-panel=unity-2d-panel
+ DesktopName=Unity
+
+# System security conf for local desktop needs
+$ sudo nano -w /etc/security/limits.conf
+YOURUSERNAME - rtprio 99
+YOURUSERNAME - nice -10
+
+sudo visudo
+myusername ALL=(ALL) NOPASSWD: ALL
+
+
+# ZSH
+chsh -s /bin/zsh
+
+
+# INSTALL PACKAGES
 download skype from http://www.skype.com/en/download-skype/skype-for-linux/downloading/?type=ubuntu64
 install lastpass from https://lastpass.com/misc_download.php
 
 
 # FONTS
+ttf-mscorefonts
+
 wget http://webupd8.googlecode.com/files/install-google-fonts
 chmod +x install-google-fonts
 
@@ -43,7 +72,7 @@ cp *.otf ~/.fonts
 fc-cache -f -v
 
 
-# ID kaardi tugi
+# Estonian ID card support
 sudo apt-get install esteid
 sudo add-apt-repository https://installer.id.ee/media/ubuntu/
 
@@ -53,9 +82,9 @@ sudo dpkg -r libdigidoc2
 sudo dpkg -r libdigidoc-common
 rm -rf /var/cache/apt/archives/libdigidoc2_3.7.0.909-ubuntu-12-04_i386.deb rm -rf /var/cache/apt/archives/libdigidocpp0_3.7.0.969-ubuntu-12-04_i386.deb
 
-# Latest java
-sudo add-apt-repository ppa:webupd8team/java
 
+# Latest java (Not needec for now as different installation is used??)
+sudo add-apt-repository ppa:webupd8team/java
 #Java
 sudo apt-get install oracle-java6-installer
 sudo apt-get install oracle-java7-installer
@@ -86,14 +115,9 @@ sudo dpkg -i /opt/cache/kernel-3.11/*.deb
 
 
 
-gsettings set org.gnome.desktop.interface menubar-accel ""
-
-gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
-gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
-
-
 ## OPENBOX section
-sudo apt-get install openbox tint2 xcompmgr docky obconf synapse thunar thunar-archive-plugin thunar-media-tags-plugin nitrogen parcellite
+sudo apt-get install openbox
+
 
 # sudo add-apt-repository ppa:xubuntu-dev/xfce-4.10
 # sudo add-apt-repository ppa:xubuntu-dev/xfce-4.12
@@ -152,10 +176,6 @@ xfwm4-themes
 
 https://makandracards.com/makandra/12447-how-to-move-a-window-to-the-next-monitor-on-xfce-xubuntu
 
-$ sudo nano -w /etc/security/limits.conf
-
-YOURUSERNAME - rtprio 99
-YOURUSERNAME - nice -10
 
 https://github.com/jtmohr/xchat-colors-solarized
 
@@ -164,18 +184,6 @@ sudo add-apt-repository ppa:gwendal-lebihan-dev/hexchat-stable
 sudo apt-get install hexchat
 
 
-sudo visudo
-ahtik ALL=(ALL) NOPASSWD: ALL
-
-
-Edit /usr/share/gnome-session/sessions/xmonad.session
-[GNOME Session]
- Name=Xmonad/GNOME
- RequiredComponents=gnome-settings-daemon;gnome-panel;
- RequiredProviders=windowmanager;panel;
- DefaultProvider-windowmanager=xmonad
- DefaultProvider-panel=unity-2d-panel
- DesktopName=Unity
 
 Install
 https://launchpad.net/egtk
@@ -184,11 +192,9 @@ sudo apt-add-repository -y ppa:teejee2008/themes
 sudo apt-get update
 sudo apt-get install elementary-gtk-theme
 
-
-sudo apt-get install gnome-shell-extensions gnome-tweak-tool
+# sudo apt-get install gnome-shell-extensions gnome-tweak-tool
 # Then enable "User Themes Extension" from gnome-tweak-tool/Advanced Settings
-
-sudo apt-get install gnome-themes-standard gnome-themes-extras gnome-themes-ubuntu gnome-themes-standard-data gnome-theme-gilouche
+# sudo apt-get install gnome-themes-standard gnome-themes-extras gnome-themes-ubuntu gnome-themes-standard-data gnome-theme-gilouche
 
 # dmg file creation mkfs.hfs
 sudo apt-get install hfsprogs
@@ -208,14 +214,12 @@ sudo add-apt-repository ppa:webupd8team/themes
 sudo apt-get install oxygen-molecule gtk2-engines-oxygen gtk2-engines-oxygen
 sudo apt-get install  kde-gtk-config
 
-ttf-mscorefonts
-
- gconftool --type boolean --set /apps/nautilus/preferences/show_desktop false
 
 #NodeJS
 sudo apt-get install nodejs npm nodejs-legacy
 
 ppa:mozillateam/thunderbird-next
+
 
 # itec expresscard
 https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1006765
@@ -226,8 +230,4 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pciehp_force=1 pciehp_poll_mode=1"
 
 and run:
 sudo update-grub
-
-
-
-
 
