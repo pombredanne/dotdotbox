@@ -18,7 +18,7 @@ The components of this playbook can change over time but as of today, it has the
  * java
  * apple wireless keyboard
  * easy sound output switch
- * support for mechanical audio volume knobs (external sound cards that support it)
+ * support for mechanical audio volume knobs (external sound cards that support it) (TODO: Check if this is still an issue, maybe works alright with unity. Is not working out of box with xmonad!)
  * dropbox
  * estonian ID card support
  * yubico 2FA token
