@@ -35,6 +35,12 @@ Building from scratch
 
 TODO
 ----
+Current TODO:
+- Trying to get Unity as tweaked as possible with 14.04LTS:
+  - Update vagrant scripts to build the latest 14.04.LTS desktop.
+  - Ensure font role works properly
+
+Unorganized TODO:
 - Figure out the DE&WM to use.. (still xmonad (my current laptop conf)?)
 - Remap Capslock to Ctrl
 - Create script to have automated apple wireless keyboard detection
