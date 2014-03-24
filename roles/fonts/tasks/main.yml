@@ -1,0 +1,30 @@
+---
+
+#  wget http://webupd8.googlecode.com/files/install-google-fonts
+#   chmod +x install-google-fonts
+   
+   # Install SourceCodePro fonts (Hi Prio)
+   #  #!/bin/bash
+   #  FONT_NAME="SourceCodePro"
+   #  URL="http://sourceforge.net/projects/sourcecodepro.adobe/files/latest/ download"
+   #  mkdir /tmp/adodefont
+   #  cd /tmp/adodefont
+   #  wget ${URL} -O ${FONT_NAME}.zip
+   #  unzip -o -j ${FONT_NAME}.zip
+   #  mkdir -p ~/.fonts
+   #  cp *.otf ~/.fonts
+   #  fc-cache -f -v
+   #           
+   #
+- name: Ensure ~/.fonts exists
+  shell: mkdir -p ~/.fonts
+
+- name: Install font SourceCodePro: Download & unzip & install
+  shell: wget -q http://sourceforge.net/projects/sourcecodepro.adobe/files/latest/download -O- | unzip -o -j
+  action: command fc-cache -f -v
+
+- name: Install font Monaco
+  action: command mkdir /usr/share/fonts/truetype/custom
+  action: get_url url=http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf dest=/usr/share/fonts/truetype/custom/
+  action: command fc-cache -f -v
+
