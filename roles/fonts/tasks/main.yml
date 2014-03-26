@@ -32,3 +32,6 @@
   action: get_url url=http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf dest=/usr/share/fonts/truetype/custom/
   action: command fc-cache -f -v
 
+# TODO Ensure everything from this is taken account to make sure java font rendering is good. http://blog.jetbrains.com/idea/2014/03/intellij-idea-13-1-rc-introduces-sublime-text-style-multiple-selections/#comment-54802
+#
+#
