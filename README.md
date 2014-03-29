@@ -36,15 +36,14 @@ Building from scratch
 TODO
 ----
 Current TODO:
-- Trying to get Unity as tweaked as possible with 14.04LTS:
-  - Update vagrant scripts to build the latest 14.04.LTS desktop.
-  - Ensure font role works properly
-
+- Add Vagrantfile with the latest 14.04LTS desktop iso!
 - Use ufw instead of iptables
+- Font tweaks and programmer fonts install
+- Remap Capslock to Ctrl
+- Apple wireless keyboard that is used only when attached
 
 Unorganized TODO:
 - Figure out the DE&WM to use.. (still xmonad (my current laptop conf)?)
-- Remap Capslock to Ctrl
 - Create script to have automated apple wireless keyboard detection
 http://www.organicdesign.co.nz/Apple_wireless_keyboard_on_Linux
 - Configure and install all the most needed fonts used for coding
