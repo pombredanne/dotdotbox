@@ -1,5 +1,39 @@
 ---
 
+- name: Update system package repos and upgrade
+  apt: update_cache=yes upgrade=safe
+  tags: upgrade
+
+- name: Install package management
+  apt: update_cache=no pkg="python-software-properties,aptitude" state=installed force=yes
+  ignore_errors: yes
+  tags: upgrade
+
+- name: Add ppa repos
+  apt_repository: repo=${item}
+  with_items: ${system_ppa}
+  tags: upgrade
+
+- name: Update system package repos and upgrade
+  apt: update_cache=yes upgrade=safe
+  tags: upgrade
+
+- name: Install required system packages.
+  apt: pkg=${item} state=installed install_recommends=no force=yes
+  with_items: ${system_packages}
+  tags: upgrade
+
+- name: Remove unneccessary packages.
+  apt: pkg=${item} state=absent purge=yes force=yes
+  with_items: ${system_purge}
+  tags: upgrade
+
+- name: add docker repo key
+  apt_key: id=A88D21E9 url=https://get.docker.io/gpg
+
+- name: Add Docker repo
+  apt_repository: repo='deb http://get.docker.io/ubuntu docker main'
+
 # $(lsb_release -sc)
 - name: Add universe
   # apt_repository: repo='universe'
@@ -14,7 +48,7 @@
 - name: Add Intel gpu drivers repo
   shell: wget -q https://download.01.org/gfx/RPM-GPG-KEY-ilg -O- | sudo apt-key add -
   tags: intelgpu
-    
+
 - name: Add intel gpu drivers repo 2
   shell: wget -q https://download.01.org/gfx/RPM-GPG-KEY-ilg-2 -O- | sudo apt-key add -
   tags: intelgpu

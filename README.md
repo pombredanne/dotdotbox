@@ -40,6 +40,8 @@ Current TODO:
   - Update vagrant scripts to build the latest 14.04.LTS desktop.
   - Ensure font role works properly
 
+- Use ufw instead of iptables
+
 Unorganized TODO:
 - Figure out the DE&WM to use.. (still xmonad (my current laptop conf)?)
 - Remap Capslock to Ctrl
