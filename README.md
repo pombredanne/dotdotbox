@@ -41,6 +41,8 @@ Current TODO:
 - Apple wireless keyboard that is used only when attached
 - Google chrome role
   https://github.com/psgrove/devsetup/blob/master/roles/chrome/tasks/main.yml
+- Check out https://github.com/zyga/vagrant-desktop-images for vagrant-based unity box..
+
 
 Unorganized TODO:
 - Create script to have automated apple wireless keyboard detection
