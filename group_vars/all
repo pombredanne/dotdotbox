@@ -32,6 +32,7 @@ system_packages:
   - tcl8.5
   - dbus-x11 # Required for dbus-x11
   - git-core
+  - sysfsutils # For thinkpad configure-trackpoint gui utility
   - libevent-dev
     #   - nginx
     #   - uwsgi
@@ -59,7 +60,8 @@ system_packages:
   - python-software-properties
   - python-passlib
   - python-pycurl
-  - zsh
+  - zsh  
+  - gpointing-device-settings # touchpad etc config util  
   - mc
   - autojump
     #   - lxc-docker
