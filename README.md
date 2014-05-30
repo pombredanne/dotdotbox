@@ -45,6 +45,7 @@ Current TODO:
 
 
 Unorganized TODO:
+- http://www.noobslab.com/2014/04/thingstweaks-to-do-after-install-of.html
 - Create script to have automated apple wireless keyboard detection
 http://www.organicdesign.co.nz/Apple_wireless_keyboard_on_Linux
 - Configure and install all the most needed fonts used for coding
