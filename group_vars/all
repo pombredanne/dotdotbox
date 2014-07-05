@@ -26,6 +26,7 @@ system_ppa:
   - ppa:no1wantdthisname/openjdk-fontfix
   - ppa:keithw/mosh
   - ppa:ppa:teejee2008/ppa # conky-manager
+  - ppa:rebuntu16/other-stuff # xfce-theme-manager
 
 system_packages:
   - build-essential
@@ -160,6 +161,7 @@ system_packages:
   - libpq-dev
   - arandr
   - conky-manager
+  - xfce-theme-manager
 
 system_purge:
     - chef
@@ -173,6 +175,9 @@ system_purge:
     - libaugeas-ruby
     - libaugeas0
     - redis-server # It will be installed from source!
+    - paman # pulseaudioo
+    - pavumeter # pulseaudio
+    - pasystray
     - unity-lens-video
     - unity-lens-shopping 
     - unity-lens-photos 
