@@ -25,6 +25,7 @@ system_ppa:
   - ppa:no1wantdthisname/ppa
   - ppa:no1wantdthisname/openjdk-fontfix
   - ppa:keithw/mosh
+  - ppa:ppa:teejee2008/ppa # conky-manager
 
 system_packages:
   - build-essential
@@ -158,6 +159,7 @@ system_packages:
   - postgresql-client
   - libpq-dev
   - arandr
+  - conky-manager
 
 system_purge:
     - chef
